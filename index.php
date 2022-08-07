@@ -30,16 +30,16 @@
               </li>
 
               <li class="nav-item">
-                <a class="nav-link" href="#">Blog</a>
+                <a class="nav-link" href="">Blog</a>
               </li>
 
               <li class="nav-item">
-                <a class="nav-link" href="#">Contact Us</a>
+                <a class="nav-link" href="contact.html">Contact Us</a>
               </li>
 
               <li class="nav-item">
-                <i class="fas fa-shopping-bag"></i>
-                <i class="fas fa-user"></i>
+                <a href="cart.html"><i class="fas fa-shopping-bag"></i></a>
+                <a href="account.html"><i class="fas fa-user"></i></a>
               </li>
 
              
@@ -116,8 +116,14 @@
           <p>Here you can check our featured products</p>
         </div>
         <div class="row mx-auto container-fluid">
+
+        <?php include('server/get_featured_products.php');?>
+
+
+
+        <?php while($row=$featured_products->fetch_assoc()){?>
           <div class="product text-center col-lg-3 col-md-4 col-sm-12">
-            <img class="img-fluid mb-3" src="assets/images/featured1.jpeg"/>
+            <img class="img-fluid mb-3" src="assets/images/<?php echo $row['product_image']; ?>"/>
             <div class="star">
               <i class="fas fa-star"></i>
               <i class="fas fa-star"></i>
@@ -127,63 +133,20 @@
 
             </div>
 
-            <h5 class="p-name">Sports Shoes</h5>
-            <h4 class="p-price">₹199.99</h4>
-            <button class="buy-btn">Buy Now</button>
+            <h5 class="p-name"><?php echo $row['product_name'];?></h5>
+            <h4 class="p-price">₹<?php echo $row['product_price'];?></h4>
+            <a href="<?php echo "single_product.php?product_id=". $row['product_id'];?>"><button class="buy-btn">Buy Now</button></a>
           </div>
 
-          <div class="product text-center col-lg-3 col-md-4 col-sm-12">
-            <img class="img-fluid mb-3" src="assets/images/featured2.jpeg"/>
-            <div class="star">
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
+          
+          
 
-            </div>
-
-            <h5 class="p-name">Puma School Bags</h5>
-            <h4 class="p-price">₹512.00</h4>
-            <button class="buy-btn">Buy Now</button>
-          </div>
-
-          <div class="product text-center col-lg-3 col-md-4 col-sm-12">
-            <img class="img-fluid mb-3" src="assets/images/featured3.jpeg"/>
-            <div class="star">
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-
-            </div>
-
-            <h5 class="p-name">Puma Office Bags</h5>
-            <h4 class="p-price">₹600.00</h4>
-            <button class="buy-btn">Buy Now</button>
-          </div>
-
-          <div class="product text-center col-lg-3 col-md-4 col-sm-12">
-            <img class="img-fluid mb-3" src="assets/images/featured4.jpeg"/>
-            <div class="star">
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-
-            </div>
-
-            <h5 class="p-name">Puma Leather Bags</h5>
-            <h4 class="p-price">₹999.00</h4>
-            <button class="buy-btn">Buy Now</button>
-          </div>
+          <?php } ?>
         </div>
       </section>
 
       <!-- Banner -->
-
+      
       <section id="banner" class="my-5 py-5">
         <div class="container">
           <h4>MID SEASON SALE</h4>
@@ -202,8 +165,12 @@
           <p>Here you can check our amazing formals</p>
         </div>
         <div class="row mx-auto container-fluid">
+
+          <?php include('server/get_coats.php');?>
+          <?php while($row=$coats_products->fetch_assoc()){?>
+
           <div class="product text-center col-lg-3 col-md-4 col-sm-12">
-            <img class="img-fluid mb-3" src="assets/images/clothes1.jpeg"/>
+            <img class="img-fluid mb-3" src="assets/images/<?php echo $row['product_image'];?>"/>
             <div class="star">
               <i class="fas fa-star"></i>
               <i class="fas fa-star"></i>
@@ -213,58 +180,16 @@
 
             </div>
 
-            <h5 class="p-name">Raymonds</h5>
-            <h4 class="p-price">₹199.99</h4>
-            <button class="buy-btn">Buy Now</button>
+            <h5 class="p-name"><?php echo $row['product_name'];?></h5>
+            <h4 class="p-price">₹<?php echo $row['product_price'];?></h4>
+            
           </div>
 
-          <div class="product text-center col-lg-3 col-md-4 col-sm-12">
-            <img class="img-fluid mb-3" src="assets/images/clothes2.jpeg"/>
-            <div class="star">
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
+         
 
-            </div>
+          
 
-            <h5 class="p-name">SiyaRams</h5>
-            <h4 class="p-price">₹512.00</h4>
-            <button class="buy-btn">Buy Now</button>
-          </div>
-
-          <div class="product text-center col-lg-3 col-md-4 col-sm-12">
-            <img class="img-fluid mb-3" src="assets/images/clothes3.jpeg"/>
-            <div class="star">
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-
-            </div>
-
-            <h5 class="p-name">Manyavar</h5>
-            <h4 class="p-price">₹600.00</h4>
-            <button class="buy-btn">Buy Now</button>
-          </div>
-
-          <div class="product text-center col-lg-3 col-md-4 col-sm-12">
-            <img class="img-fluid mb-3" src="assets/images/clothes4.jpeg"/>
-            <div class="star">
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-
-            </div>
-
-            <h5 class="p-name">Mufti</h5>
-            <h4 class="p-price">₹999.00</h4>
-            <button class="buy-btn">Buy Now</button>
-          </div>
+         <?php } ?>
         </div>
       </section>
 

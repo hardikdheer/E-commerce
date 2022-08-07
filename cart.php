@@ -1,16 +1,27 @@
+<?php
+
+
+
+
+
+?>
+
+
+
 <!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Register</title>
+    <title>Cart</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous"/>
     <link rel="stylesheet" href="assets/css/style.css"/>
 </head>
   <body>
 
-    <!-- Navbar -->
+
+     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-white py-3 fixed-top">
       <div class="container">
         <img class="logo" src="assets/images/logo.jpeg"/>
@@ -55,49 +66,125 @@
 
 
 
-      <!-- Register -->
-      <section class="my-5 py-5">
 
-        <div class="container text-center mt-3 pt-5">
-          <h2 class="form-weight-bold">Register</h2>
-          <hr class="mx-auto">
+
+      <!-- Cart -->
+      <section class="cart container my-5 py-5">
+        <div class="container mt-5">
+            <h2 class="font-weight-bold">Your Cart</h2>
+            <hr>
         </div>
-        <div class="mx-auto container">
-          <form id="register-form">
-            <div class="form-group">
-                <label>Name</label>
-                <input type="text" class="form-control" id="register-name" name="name" placeholder="Name" required/>
-              </div>
-            <div class="form-group">
-              <label>Email</label>
-              <input type="text" class="form-control" id="register-email" name="email" placeholder="Email" required/>
-            </div>
-            <div class="form-group">
-              <label>Password</label>
-              <input type="password" class="form-control" id="register-password" name="password" placeholder="Password" required/>
-            </div>
-            <div class="form-group">
-                <label>Confirm Password</label>
-                <input type="password" class="form-control" id="register-password" name="confirmPassword" placeholder="Confirm Password" required/>
-              </div>
-            <div class="form-group">
-              
-              <input type="submit" class="btn" id="register-btn" value="Register"/>
-            </div>
-            <div class="form-group">
-              
-             <a id="login-url" class="btn">Do you have an Account? Login</a>
-            </div>
-          </form>
+
+
+        <table class="mt-5 pt-5">
+            <tr>
+                <th>Product</th>
+                <th>Quantity</th>
+                <th>Subtotal</th>
+            </tr>
+            <tr>
+                <td>
+                    <div class="product-info">
+                        <img src="assets/images/featured1.jpeg"/>
+                    </div>
+                    <div>
+                        <p>White Shoes</p>
+                        <small><span>₹</span>155</small>
+                        <br>
+                        <a class="remove-btn" href="#">Remove</a>
+                    </div>
+                </td>
+
+                <td>
+                    <input type="number" value="1"/>
+                    <a class="edit-btn" href="#">Edit</a>
+                </td>
+
+                <td>
+                    <span>₹</span>
+                    <span class="product-price">155</span>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <div class="product-info">
+                        <img src="assets/images/featured1.jpeg"/>
+                    </div>
+                    <div>
+                        <p>White Shoes</p>
+                        <small><span>₹</span>155</small>
+                        <br>
+                        <a class="remove-btn" href="#">Remove</a>
+                    </div>
+                </td>
+
+                <td>
+                    <input type="number" value="1"/>
+                    <a class="edit-btn" href="#">Edit</a>
+                </td>
+
+                <td>
+                    <span>₹</span>
+                    <span class="product-price">155</span>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <div class="product-info">
+                        <img src="assets/images/featured1.jpeg"/>
+                    </div>
+                    <div>
+                        <p>White Shoes</p>
+                        <small><span>₹</span>155</small>
+                        <br>
+                        <a class="remove-btn" href="#">Remove</a>
+                    </div>
+                </td>
+
+                <td>
+                    <input type="number" value="1"/>
+                    <a class="edit-btn" href="#">Edit</a>
+                </td>
+
+                <td>
+                    <span>₹</span>
+                    <span class="product-price">155</span>
+                </td>
+            </tr>
+        </table>
+        
+        
+        <div class="cart-total">
+            <table>
+                <tr>
+                    <td>Subtotal</td>
+                    <td>₹155</td>
+                </tr>
+                <tr><td>
+                    Total
+                </td>
+            <td>₹155</td></tr>
+            </table>
         </div>
+
+
+        <div class="checkout-container">
+            <button class="btn checkout-btn">Checkout</button>
+        </div>
+
+       
       </section>
 
 
 
 
 
-      <!-- Footer -->
-      <footer class="mt-5 py-5">
+
+
+       <!-- Footer -->
+       <footer class="mt-5 py-5">
         <div class="row container mx-auto pt-5">
           <div class="footer-one col-lg-3 col-md-6 col-sm-12">
             <img class="logo" src="assets/images/logo.jpeg"/>
@@ -167,6 +254,12 @@
         </div>
 
       </footer>
+
+
+
+
+
+
 
 
 
