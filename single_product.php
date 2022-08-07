@@ -113,6 +113,7 @@ else{
             <h2>₹<?php echo $row['product_price']; ?></h2>
 
             <form method="POST" action="cart.php">
+            <input type="hidden" name="product_id" value="<?php echo $row['product_id']; ?>"/>
             <input type="hidden" name="product_image" value="<?php echo $row['product_image']; ?>"/>
             <input type="hidden" name="product_name" value="<?php echo $row['product_name']; ?>"/>
             <input type="hidden" name="product_price" value="<?php echo $row['product_price']; ?>"/>
