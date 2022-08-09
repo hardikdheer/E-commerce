@@ -386,16 +386,22 @@ footer .copyright img{
    color: #fb774b; 
 }
 
-.cart .remove-btn{
+ .cart .remove-btn{
     color: #fb774b;
     text-decoration: none;
     font-size: 14px;
+    background-color: white;
+    border: none;
+    width: 100%;
 }
 
 .cart .edit-btn{
     color: #fb774b;
     text-decoration: none;
     font-size: 15px;
+    background-color: #fff;
+    border: none;
+    
 }
 
 .cart .product-info p{
