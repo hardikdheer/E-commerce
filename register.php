@@ -3,6 +3,13 @@
 
 session_start();
 include('server/connection.php');
+
+if(isset($_SESSION['logged_in'])){
+
+  header('location: account.php');
+  exit;
+}
+
 if(isset($_POST['register'])){
 
   $name=$_POST['name'];
@@ -56,7 +63,7 @@ if(isset($_POST['register'])){
     $_SESSION['user_email']=$email;
     $_SESSION['user_name']=$name;
     $_SESSION['logged_in']= true;
-    header('location: account.php?register=You are registered succesfully');
+    header('location: account.php?register_success=You are registered succesfully');
    }
 
    //account could not be created
@@ -80,11 +87,7 @@ if(isset($_POST['register'])){
 
 }
 // if user has already registered, then take user to account page
-else if(isset($_SESSION['logged_in'])){
 
-  header('location: account.php');
-  exit;
-}
 
 
 
