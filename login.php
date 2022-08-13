@@ -34,7 +34,7 @@ if(isset($_POST['login_btn'])){
       $_SESSION['user_email']=$user_email;
       $_SESSION['logged_in']=true;
 
-      header('location: account.php?login_success=Logged in succesfully');
+      header('location: account.php?login_success=Logged in successfully');
     }
     else{
       header('location: login.php?error=There is no account with these credentials');

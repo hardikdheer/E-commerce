@@ -105,7 +105,7 @@ else{
         </table>
 
         <?php if($order_status == "not paid"){?>
-            <form style="float:right;">
+            <form style="float:right;" method="POST" action="payment.php">
         
             
                 <input type="submit" class="btn btn-primary" value="Pay Now">
